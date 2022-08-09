@@ -1,0 +1,17 @@
+{
+    "custom_width_str": "32:128,16:256,8:512,4:512",
+    "width": 128,
+    "enc_blocks": "32x1,32d2,16x1,16d2,8x1,4d2,4x2",
+    "dec_blocks": "4x2,4d2,8x1,8d2,16x1,16d2,32x2",
+    "codebook_size": 2048,
+    "dataset": "cifar10",
+    "model": "vqvae",
+    "name": "vqvae1",
+    "image_size": 32,
+    "ema_rate": 0.999,
+    "restore_path": "./saved_models/cifar10",
+    "restore_iter": 0,
+    "entity": "eleutherai",
+    "vq_res": 4,
+    "split_test": "test"
+}

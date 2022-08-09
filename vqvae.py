@@ -27,6 +27,7 @@ class BasicUnit(nn.Module):
             raise NotImplementedError
         widths = get_width_settings(H.custom_width_str)
         blocks = parse_layer_string(block_str)
+        # print(widths, blocks)
         x = Conv3x3(widths[str(blocks[0][0])], dtype=H.dtype)(x)
         for res, down_rate in blocks:
             if res < self.min_res:

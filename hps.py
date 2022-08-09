@@ -121,7 +121,9 @@ class Hyperparams:
 
 def parse_args_and_update_hparams(H, parser, s=None):
     parser_dict = vars(parser.parse_args(s))
+    parser_dict['hps'] = parser_dict['model']
     json_file = parser_dict['hps']
+    # print(parser_dict)
     with open(json_file) as f:
         json_dict = json.load(f)
     parser_dict.update(json_dict)
